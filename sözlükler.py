@@ -1,4 +1,5 @@
 ################################# SÖZLÜKLER ####################################
+# SÖZLÜK OLUŞTURMAK
 """
 alien0 = {"renk":"yeşil","puan":5}
 print(alien0["renk"])
@@ -12,15 +13,17 @@ alien0["y_position"] = 25
 print(alien0)
 """
 ########################################################################
+# YENİ ANAHTAR DEĞER ÇİFTİ EKLEMEK
 """
 alien1 ={}
 
-alien1["renk"] = "mor"  # yeni anahtar-değer eklemek
+alien1["renk"] = "mor"  
 alien1["puan"] = 15
 
 print(alien1)
 """
 ########################################################################
+# SÖZLÜKTE DEĞER GÜNCELLEMEK
 """
 alien2 ={"renk": "mavi"}
 print(f"uzaylı {alien2['renk']} renktedir.")
@@ -29,6 +32,7 @@ alien2["renk"] = "sarı"
 print(f"uzaylı şimdi {alien2['renk']} renktedir. ")
 """
 ########################################################################
+# ŞARTLARA GÖRE DEĞER GÜNCELLEMEK
 """
 alien = {"x_position": 0, "y_position": 25 ,"hız": "yavaş"}
 print(f"original x-konumu : {alien['x_position']}")
@@ -53,6 +57,7 @@ alien["x_position"] = alien["x_position"] + x_increment
 print(f"Yeni x-konumu : {alien['x_position']}")
 """
 ########################################################################
+# SÖZLÜKTE ANAHTAR-DEĞER SİLMEK
 """
 alien0 = {"renk":"yeşil","puan":5}
 
@@ -61,8 +66,8 @@ del alien0["puan"]
 print(alien0)
 """ 
 ########################################################################
-"""
 # PARANTEZ İÇİNİ SIRALI KULLANMAK VE BENZER NESNELERİN SIRALANMASI
+"""
 favori_languages ={
     "ayşe": "python",
     "ahmet": "java",
@@ -77,18 +82,11 @@ print(f"{language} ahmet'in favori dilidir.")
 print(favori_languages)
 """
 ########################################################################
-"""
 # DEĞERLERE ERİŞMEK İÇİN get() KULLANMAK
-#GET EĞER ANAHTARIN DEĞERİ YOKSA HATA YERİNE BİZİM VERDİĞİMİZ VARSAYILAN 
-#DEĞERİ GÖSTERİR EĞER BİZ DEĞER VERMEZSEK YİNE HATA YERİNE "NONE" DEĞERİ
-#YANİ HİÇBİR DEĞERİ YOK YAZDIRIR.
-
-# USING get() TO REACH VALUE
-# IF KEY HASN'T GOT A VALUE ,get() SHOWS US THAT WE GIVE A ALTERNATIF VALUE
-#INSTEAD OF FAİL. IF WE DON'T GİVE A VALUE , get() SHOWS US NONE WHIC MEANS
-#IT HAS NO VALUE. INSTEAD OF FAİL
-
-
+# GET EĞER ANAHTARIN DEĞERİ YOKSA HATA YERİNE BİZİM VERDİĞİMİZ VARSAYILAN 
+# DEĞERİ GÖSTERİR EĞER BİZ DEĞER VERMEZSEK YİNE HATA YERİNE "NONE" DEĞERİ
+# YANİ HİÇBİR DEĞERİ YOK YAZDIRIR.
+"""
 alien0 = {"renk":"yeşil","puan":5}
 
 point_value = alien0.get("puan","hiçbir puan değeri atanmamış")
@@ -98,12 +96,11 @@ point_value = alien0.get("tür","hiçbir tür değeri atanmamış")
 print(point_value)
 
 # EĞER PUANIN DEĞERİ VARSA YAZDIRIR.
-# IF PUAN HAS A VALUE,PUAN IS WRITTEN.
-
 # KÖŞELİ PARANTEZ KULLANMAKTAN DAHA FAYDALI 
-# USING get() IS MORE USEFUL THAN box brackets 
 """
 ########################################################################
+# SÖZLÜK OLUŞTURMAK VE FOR DÖNGÜSÜ İLE SÖZLÜĞÜN ANAHTARLARINI YAZDIRMAK
+# ÇITIR UYGULAMA
 """
 person = {
     "first_name": "EYÜP",
@@ -112,8 +109,7 @@ person = {
     "age" : 46
 }
 print(person)
-"""
-"""
+
 friends_lucky_numbers = {
     "ayşe": 26,
     "semih": 42,
@@ -128,9 +124,8 @@ print(friends_lucky_numbers)
 for key , value in friends_lucky_numbers.items():
     print(f"\nisim : {key}")
     print(f"şanslı sayı : {value}")
-"""
-"""
 
+    
 learned_words = {
     "if " : "conditional",
     "print ": "write",
@@ -144,9 +139,8 @@ for key, value in learned_words.items():
     print(f"değer : {value}")
 """
 ########################################################################
+# ANAHTAR VE DEĞERLERE ULAŞABİLMEK İÇİN .keys() VE .values() KULLANMAK-FOR DÖGÜSÜ 
 """ 
-# USING FOR LOOP TO REACH KEY AND VALUE 
- 
 user = {
     "username": "yusufi",
     "firs_n": "yusuf",
@@ -158,9 +152,8 @@ for key , value in user.items():
     print(f"değer:{value}")
 """    
 ########################################################################
-"""
 # ANAHTARLAR ÜZERİNDEN DÖNGÜ KURMAK 
-
+"""
 favori_languages ={
     "ayşe": "python",
     "ahmet": "java",
@@ -178,8 +171,9 @@ for name in favori_languages:
 
 """ 
 ########################################################################
+# ÇITIR UYGULAMA
 """
-favori ={
+favori_dil ={
     "ayşe": "python",
     "ahmet": "java",
     "dilara": "c",
@@ -188,23 +182,22 @@ favori ={
 
 friends = ["ayşe","ahmet"]
 
-for name in favori.keys():
-    print(f"'merhaba, {name.title()}.'")
-    language = favori[name].title()
+for name in favori_dil.keys():
+    print(f"'merhaba, {name.title()}.'\n")
+    language = favori_dil[name].title()
     print(f"{name} 'ın en sevdiği dil : ", language)
 
     if name in friends:
-        #language = favori[name].title()
-        print(f"\n{name.title()}, {language} dilini sevdiğini görüyorum!")
+        #language = favori_dil[name].title()
+        print(f"{name.title()}, {language} dilini sevdiğini görüyorum!\n")
 
-if 'mehmet' not in favori.keys():
+if 'mehmet' not in favori_dil.keys():
     print("mehmet lütfen anketimize katıl !")
  
 """
 ########################################################################
+# ANAHTAR ÜZERİNDEN DEĞERLERE ULAŞMAK
 """  
-#print(kanks[isim]) -----> bu şehirleri nasıl yazdırıyor ?  
-
 kanks = {
     "ogi":"konya",
     "ahmet": "istanbul",
@@ -217,10 +210,11 @@ for isim in kanks.keys():
     # print(isim)
     # print(f"selamün aleyküm {isim.upper()}")
     print(kanks[isim])
-     """
+"""   
 ########################################################################
+# ANAHTARLARI VE DEĞERLERİ SIRALI BİR ŞEKİLDE YAZDIRMAYI SAĞLAR
 """
-# SIRALI BİR ŞEKİLDE YAZDIRMAYI SAĞLAR
+
 favori_languages ={
     "ayşe": "python",
     "ahmet": "java",
@@ -235,9 +229,8 @@ for dil in sorted(favori_languages.values()):
     print(dil)
 """    
 ########################################################################
+# DEĞERLER ÜZERİNDEN SIRALANMIŞ BİR ŞEKİLDE DÖNGÜ KURMAK
 """
-# DEĞERLER ÜZERİNDEN DÖNGÜ KURMAK
-
 favori_languages ={
     "ayşe": "python",
     "ahmet": "java",
@@ -250,10 +243,8 @@ for languages in sorted(favori_languages.values()):
     print(languages.title())
 """
 ########################################################################
+# DEĞERLERİN İÇİNDE TEKRAR EDEN VERİLER OLABİLİR O YÜZDEN KÜME ŞEKLİNDE YAZDIRABİLİRİZ
 """
-# DEĞERLERİN İÇİNDE TEKRAR EDEN VERİLER OLABİLİR O YÜZDEN KÜME ŞEKLİNDE
-#ÇEKEBLİRİZ
-
 favori_languages ={
     "ayşe": "python",
     "ahmet": "java",
@@ -266,18 +257,23 @@ favori_languages ={
 
 for languages in set(favori_languages.values()):
     print(languages.title())
+# Pythonda set listeleri, list' e benzer ancak fark olarak set içindeki 
+# elemanlar sıralanamaz (sort) ve indekslenemez yani set elemanlarına 0,1
+# şeklinde indeks numaraları ile ulaşamayız. Dolayısıyla set 'e eklediğimiz
+# bir elemanın set listesi içinde hangi sırada olacağını bilemeyiz. Ayrıca
+# set içerisindeki elemanlar tekrarlayamaz, her bir elemandan sadece bir 
+# tane olmalıdır, tekrarlayanlar silinir.
 
 # KÜMELER
+# kümeler sözlüklere benzer ama anahtarları yoktur ve her bir elemandan 
+# yalnızca bir tane bulunur liste ve sözlüklere nazaran sıralı değildirler
 
 diller = {"python","python","c++","java","java","c#","c++"}
 print(diller)
-
-# küme same dictionary but küme hasn't got a key-value . it has just a data
-# so you can understand what are you looking and kümes don't exist a ordinal
-# value in comparison with list and dictionary.
 """ 
 ########################################################################
-""" # ETKİNLİK 
+# ÇITIR UYGULAMALAR 
+"""
 learned_words = {
     "if " : "conditional",
     "print ": "write",
@@ -293,9 +289,8 @@ learned_words = {
 for key , value in learned_words.items():
     print(f"\nyazılım sözlüğü : {key}")
     print(f"anlamı : {value}")
- 
 
-
+#---------------------------------------------------- 
 example= {
     "mısır": "nil",
     "bulgaristan": "tuna",
@@ -313,7 +308,7 @@ for nehir in example.values():
 for ülke in example.keys():
     print(ülke)
 
-
+#----------------------------------------------------
 favori_languages ={
     "ayşe": "python",
     "ahmet": "java",
@@ -333,9 +328,8 @@ for kişiler in favori_languages.keys():
         print("lütfen anketimizi yanıtlayınız.")    
  """
 ########################################################################
+# SÖZLÜKLERİ BİRLEŞTİRMEK 
 """
-# İÇ İÇE YERLEŞTİRME 
-
 alien1 = {"renk" : "mavi", "puan": 5}
 
 alien2 = {"renk" : "yeşil", "puan": 10}
@@ -348,7 +342,7 @@ for i in aliens:
     print(i)
 """
 
-######### NEW EXAPMLE #########
+################# NEW EXAPMLE ###################
 """
 # create an empty list to store aliens
 aliens = []
@@ -369,20 +363,20 @@ for alien in aliens[:5]:
 print(f"toplam uzaylı sayısı : {len(aliens)}")
 """
  
-###############
+############### ÇITIR UYGULAMALAR ###############
 """
-magalar = []
+agalar = []
 
-for magam in range(12):
-    old_magam = {"memleket": "kayserü", "yaş":23, "lise":"NMBAL"}
-    magalar.append(old_magam)
+for agam in range(12):
+    old_agam = {"memleket": "kayserü", "yaş":23, "lise":"NMBAL"}
+    agalar.append(old_agam)
     
     
-for maga in magalar[:7]:
-    print(maga)
+for aga in agalar[:7]:
+    print(aga)
     print("------")
     
-print(f" toplam maga sayısı: {len(magalar)}")    
+print(f" toplam aga sayısı: {len(agalar)}")    
 """
 ################
 """
@@ -409,9 +403,8 @@ for maga in magalar[:7]:
 
 """
 ########################################################################
+# SÖZLÜK İÇİNDE LİSTE 
 """
- # SÖZLÜK İÇİNDE LİSTE 
-
 pizza = {
     "hamur": "kalın",
     "malzemeler" : ["mantar","peperonni","fazladan peynir"]
@@ -425,7 +418,7 @@ for topping in pizza["malzemeler"]:
  
 """
 ###############################
-
+# UYGULAMA 
 """
 favori_languages ={
     "ayşe": ["python","c"],
@@ -440,9 +433,8 @@ for name , languages in favori_languages.items():
     for language in languages:
         print(f"\t{language.title()}")
 """
-
-
 ########################################################################
+# UYGULAMA - SÖZLÜKLERİ BİRLEŞTİRMEK
 """
 sözlük = {
     "name": "yusuf",
@@ -461,7 +453,8 @@ people = [sözlük,sözlük1]
 for insan in people:
     print(insan) 
 """ 
-##################333
+#####################
+# UYGULAMA - SÖZLÜKLERİ BİRLEŞTİRMEK
 """ 
 hayvan = {
     "tür": "köpek",
@@ -484,6 +477,7 @@ for a in pets:
     print(a) 
 """
 ###########################
+# DEĞER OLARAK LİSTE VERMEK VE HER BİR LİSTE ELEMANINI DÖNGÜYE SOKUP YAZDIRMAK
 """
 favourite_places ={
     "nalan": [" istanbul","ankara","izmir"],
@@ -496,6 +490,7 @@ for name , places in favourite_places.items():
             print(f"\n{name}'in favori mekanları : {place}")
 """   
 ########################################################################
+# UYGULAMA - DEĞER OLARAK LİSTE VERMEK
 """
 kişiler ={
     "ali": [1,2,3,4],
@@ -508,6 +503,7 @@ for isim, sayı in kişiler.items():
     print(f"en seviği sayılar: {sayı}") 
 """
 ########################################
+# SÖZLÜK İÇİNDE SÖZLÜK
 """
 cities= {
     "sakarya":{
@@ -526,14 +522,15 @@ cities= {
         "fact": "city of rain",
     },
 }
+
+for şehir , özellikleri in cities.items():
+   print(f"{şehir}:\n\tcountry: {özellikleri['country']},\n\tpopülation : {özellikleri['popülation']},\n\tinformation : {özellikleri['fact']}.") 
 """
 
 #for şehir , özellikleri in cities.items():
 #    print(f"""{şehir}:
 #        country: {özellikleri["country"]},
 #        popülation : {özellikleri["popülation"]},
-#        information : {özellikleri["fact"]}. 
-        
-#    """)
-
+#        information : {özellikleri["fact"]}.""") 
+          
 ########################################

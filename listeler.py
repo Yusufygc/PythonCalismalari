@@ -1,18 +1,19 @@
-##################################### KISIM-2 --> BÖLÜM-1) LİSTELER ################
+####################### LİSTELER ########################
 """
 kalem = ["tükenmez", "dolma","kurşun","renkli","simli"]
-#print(kalem)
+print(kalem)
 
-#print(kalem[2]) # İSTEDĞİN ELEMANIN İNDEKS NUMARASI YAZ ÇEK
+print(kalem[2]) # İSTEDĞİN ELEMANIN İNDEKS NUMARASI YAZ ÇEK
 
-#print(kalem[3].upper()) # bu şekilde varklı fonksiyonlar kullanıp liste içindeki elemanları değiştirebiliriz
+print(kalem[3].upper()) # bu şekilde varklı fonksiyonlar kullanıp liste içindeki elemanları değiştirebiliriz
 
-#print(kalem[-1]) # SONDAKİ ELEMANI YAZDIRIR -2 -3 -4 de sondaki elemanlı yazdırır
+print(kalem[-1]) # SONDAKİ ELEMANI YAZDIRIR -2 -3 -4 de sondaki elemanlı yazdırır
 
-#message = f"kullanmaktan en keyim aldığım kalem {kalem[0].upper()} kalemdir."
-#print(message)
+message = f"kullanmaktan en keyim aldığım kalem {kalem[0].upper()} kalemdir."
+print(message)
 """
-##########################################################
+############################################################
+# LİSTELERİ BİRLEŞTİRMEK
 """
 sayi = [ 1,2,3,4,5]
 
@@ -20,7 +21,8 @@ toplam = kalem + sayi
 
 print(toplam)
 """
-#######################################################33
+############################################################
+# İNDEX NUMARASINA GÖRE ELEMAN SİLMEK
 """
 del kalem[2]
 
@@ -30,7 +32,8 @@ del sayi[4]
 
 print(sayi)
 """
-############################################
+############################################################
+# LİSTELERİN SONUNA ELEMAN EKLEMEK
 """
 kalem.append("pahalı")
 
@@ -40,7 +43,8 @@ sayi.append(6)
 
 print(sayi)
 """
-############################################
+############################################################
+# LİSTELERİN İÇİNE ELEMAN EKLEMEK (İNDEX NUMARASINA GÖRE)
 """
 kalem.insert(2,"ucuz kalem")
 
@@ -50,7 +54,8 @@ sayi.insert(3,56)
 
 print(sayi)
 """
-############################################
+############################################################
+# LİSTELERİN SONUNDAN ELEMAN ÇIKARMAK
 """
 toplam.pop(3)
 print(toplam)
@@ -59,7 +64,8 @@ kalem.pop(3)
 
 print(kalem)
 """
-############################################
+############################################################
+# LİSTELERİN İÇİNDE BULUNAN ELEMANLARI SİLMEK(DEĞERİNE GÖRE)
 """
 sayi.remove(2)
 sayi.remove(3)
@@ -72,7 +78,8 @@ yeni.remove(1)
 
 print(yeni)
 """
-############################################
+############################################################
+# LİSTELERİN İÇİNDEKİ ELEMANLARI SIRALAMAK
 """
 yeni.sort()
 
@@ -81,7 +88,8 @@ print(yeni)
 kalem.sort()
 print(kalem)
 """
-############################################
+############################################################
+# LİSTELERİN İÇİNDEKİ ELEMANLARI TERSTEN SIRALAMAK
 """
 kalem.reverse()
 print(kalem)
@@ -89,7 +97,25 @@ print(kalem)
 toplam.reverse()
 print(toplam)
 """
-############################################
+############################################################
+# LİSTE KOPYALAMA
+"""
+my_foods = ["mantı","kebab","yağlama","dürüm","pastırma"]
+ 
+kayserili_friends_foods = my_foods[:]
+
+print("Sevdiğim yemekler :")
+print(my_foods)
+print("\naganın sevdiği yemekler :")
+print(kayserili_friends_foods)
+
+my_foods.append("caciki")
+kayserili_friends_foods.append("baklava")
+print(my_foods)
+print(kayserili_friends_foods)
+"""
+############################################################
+# ÇITIR UYGULAMA
 """
 yeni = [ 1,7,1,11,34,5,4,2,3,9,0,1,1]
 v=yeni.count(1)
@@ -107,7 +133,8 @@ b=f" Selamün aleyküm {names[4]} nabersin "
 
 print(b)
 """
-############################################
+############################################################
+# LİSTE ELEMANINI DEĞİŞTİRMEK,EKLEMEK,ÇIKARMAK - ÇITIR UYGULAMA
 """
 cars = ["BMW","AUDI","MERCEDES","ANADOL"]
 
@@ -138,9 +165,14 @@ popped_actors = actors.pop()
 print(actors)
 print(popped_actors)
 
-# listenin içinden tamamen silmek istiyorsan del , listeden çıkarmak istiyorsan pop , inddeksini değilde değerini bilindiğin bir şeyi silmek istiyprsan remove
+############################
+#####     DİKKAT       #####
+####################################################################################
+# LISTENIN IÇINDEN TAMAMEN SILMEK ISTIYORSAN DEL , LISTEDEN ÇIKARMAK ISTIYORSAN POP , INDDEKSINI DEĞILDE DEĞERINI BILINDIĞIN BIR ŞEYI SILMEK ISTIYPRSAN REMOVE
+####################################################################################
 """
-############################################
+############################################################
+# TARİHSEL KONULU -UYGULAMA
 """
 # UFAK BİR LİSTE ÇALIŞMASIYDI 
 
@@ -186,7 +218,8 @@ v=len(kisiler)
 
 print(f"{v} kişi davet ettim")
 """
-##############################################
+############################################################
+# SIRALAMA - ÇITIR UYGULAMA
 """
 iller = ["kayseri","sakarya","istanbul","manisa","bursa","samsun"]
 
@@ -213,7 +246,8 @@ print(iller)
 
 print(len(iller))
 """
-##############################################
+############################################################
+# SIRALAMA - ÇITIR UYGULAMA 1
 """
 istek = ["amerika","italya","ispanya","türkistan","japonya"]
 
@@ -235,15 +269,15 @@ print(istek)
 istek.sort(reverse=True)
 print(istek)
 """
-##############################################
+############################################################
+# KASITLI İNDEX HATASI (SIFIRDAN BAŞLAR UNUTMA :))
 """
 iller = ["kayseri","sakarya","istanbul","manisa","bursa","samsun"]
 
 print(iller[6])
 # KASITLI İNDEKS HATASI. AYIK OL İNDEKS HATASI YAPMA
 """
-##############################################
-
+############################################################
 
 
 

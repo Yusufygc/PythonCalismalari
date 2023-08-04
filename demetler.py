@@ -1,5 +1,6 @@
-
-################################## DEMETLER ############################
+################ DEMETLER  ################## 
+# Listelere benzer ama sabittir. Üzerinde işlem yapamayız manuel olarak yapılabilir ya da listeye çevrilir işlem yapılır sonra tekrardan tuple yapılabilir.
+############################################# 
 """
 dimensions = (200,50)
 print(dimensions[0])
@@ -21,15 +22,15 @@ print("\nDeğiştirilmiş değerler :")
 for x in dimensions:
     print(x)
 
-bahadır = ("mercimek","misket köfte","pirinç pilavı","kemalpaşa tatlii","su")
+bahadır_restorant = ("mercimek","misket köfte","pirinç pilavı","kemalpaşa tatlii","su")
 
-for yemek in bahadır:
+for yemek in bahadır_restorant:
     print(yemek)
 
-#bahadır[4]="ayran"
+#bahadır_restorant[4]="ayran"
 
-bahadır= ("\nmercimek","izmir köfte","bulgur pilavı","kemalpaşa tatlii","kola")
-for yemek in bahadır:
+bahadır_restorant= ("\nmercimek","izmir köfte","bulgur pilavı","kemalpaşa tatlii","kola")
+for yemek in bahadır_restorant:
     print(yemek)
 
 """

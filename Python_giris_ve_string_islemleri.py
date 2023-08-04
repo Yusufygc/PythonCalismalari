@@ -1,5 +1,6 @@
 
-###############  PYTHON GİRİŞ VE PRİNT  #####################
+###############  PYTHON GİRİŞ #####################
+######### PRİNT VE STRİNG İŞLEMLERİ ###############
 
 ##############################################
 """
@@ -23,6 +24,7 @@ recep_ivedik = "ŞUAN DIREKSIYONDAYIM ALTI GUNDUR YOLDAYIM..."
 print(recep_ivedik.lower())
 """
 ##############################################
+############### FORMAT METODU ################
 """
 first = "ezel"
 second = "bayraktar"
@@ -46,7 +48,7 @@ print(message)
 """
 ###############################################
 """
-print("\n\trachel \n\tLOVES \n\tross \n\tso much")
+print("\n\tross \n\tLOVES \n\trachel \n\tso much")
 
 print("İslamın şartı beştir:\n\tZekat vermek \n\thacca gitmek \n\toruç tutmak \n\tnamaz kılmak \n\tşehadet getirmek")
 
@@ -76,37 +78,41 @@ print(f"{A} zahmet olmazsa {B}")
 v = "Ali"
 b = "VELİ"
 n = "rıza"
+
 print(v.upper())
-print(n.title())
 print(b.lower())
+print(n.title()) # baş harfi büyültür
+
 B = b.lower()
 N = n.title()
 print(B)
 print(B.title())
+
 print(N)
 print(N.lower())
 """
 #################################################
 """
-D = "HAVZULLAH dedi ki:"
+D = "HAVZULLAH dedi ki:" # havzullah = bizim mahalledeki dolmuşçu reis
 E = "Aşk mı kaderi kovalar"
-R ="kader mi aşkı "
-T= "daha kimse çözemedi "
+R = "kader mi aşkı "
+T=  "daha kimse çözemedi "
 
-print(f"{D}{E} yoksa {R}{T}bu bilmeceyi.")
+print(f"{D}{E} yoksa {R}{T} bu bilmeceyi.")
 """
 ####################################################
 """
-very_famous_person =" bi tuttum kafasından "
+very_famous_person ="bi tuttum kafasından tak . Ayağımın altında. "
 
 hasan_dayı = very_famous_person
 
-print(hasan_dayı)
+print("Hasan Dayı :",hasan_dayı)
 """
 ################################################
 """
 ada = "   iyki doğdun mızaffer    "
 ada_m = "\n\tiyiki \ndoğdun \n\tmızaffer"
+
 print(ada_m)
 print(ada.lstrip())
 print(ada)
@@ -118,12 +124,14 @@ print(ada.strip())
 """
 a=2**6
 b= 4/2
+
 print(32/4)
 print(2**3)
 print(6.5+1.5)
 print(79-71)
 """
 ##############################################
+########### SIRALI DEĞİŞKEN ATAMA ############
 """
 a,b,c,d = "agresifim","kompleksliyiim","abi mabi ","yoh öyle..."
 
@@ -131,13 +139,14 @@ print(a,b,c,d)
 """
 ##############################################
 """
-MAX_SAU = 54
+SAU = 54
 # BİR DEĞİŞKENİN SABİT MUAMELE GÖRMESİ İÇİN DEĞİŞKENİ BÜYÜK HARFLE YAZ
 """
 ###################################
 """
 b= 38
 print(b)
+
 b= "kayseri'nin plaka numarası"
 print(b)
 """

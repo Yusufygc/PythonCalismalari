@@ -3,6 +3,7 @@
 ##################################################################
 
 ##################################################################
+# FONKSIYONLAR BIR DEFA TANIMLANIR VE ISTEDIĞIMIZ KADAR ÇAĞIRABILIRIZ.
 """
 def kullanıcıyı_selamla():
     # Çıtır bir selamlama 
@@ -23,6 +24,7 @@ def fitneci_avla():
 fitneci_avla()
 """
 ####################################################################
+# UYGULAMA - FONKSİYON KULLANIMI 
 """
 def selam_ver(username):
     print(f" Selamün aleyküm {username.title()}")
@@ -30,8 +32,10 @@ def selam_ver(username):
 selam_ver("tyler durden")    
 
 selam_ver("patrick bateman")
+
 """
 ####################################################################
+# FONKSİYONA PARAMETRE GÖNDERMEK
 """
 def haber_ver():
     print("zaatı şahane fonksiyonları öğreniyor")
@@ -42,9 +46,13 @@ def favori_kitap(username):
     print(f"{username.title()} en sevdiğim kitaplardandır.")
     
 favori_kitap("monte kristo kontu")
+
+def padişah(adı,kaçıncı):
+    print(f"sultan {kaçıncı} {adı.title()} huzura teşrif etmişlerdir")
+
+padişah("mehmet","2.")
 """
 ####################################################################
-    
 ### BTK AKADEMİ UĞRAŞMACA ###
 """
 def tekrarlat( kelime , adet):
@@ -58,8 +66,9 @@ def calis_köle(emir , tekrar):
 calis_köle("\n\todun kes", 3)
 """
 #########################################
+# '*' bu listeye '**' bu da sözlüğe çevirir
 """
-def listeye_cevir(*args):   # '*' bu listeye '**' bu da sözlüğe çevirir
+def listeye_cevir(*args):   
     liste = []
     for arg in args:
         liste.append(arg)
@@ -70,14 +79,10 @@ sonuc =listeye_cevir(12,10,115,"hii",95,"selamss")
 
 print(sonuc)
 """
-#########################################
-
 ####################################################################
-"""
 ########## ARGÜMAN GÖNDERMEK ##########
-
 #### KONUMSAL ARGÜMANLAR #####
-
+"""
 def describe_pet(animal_type, pet_name) :
     print(f"\n ben bir {animal_type} sahibiyim")
     print(f"\nhayvanımın adı {pet_name} dir")
@@ -86,11 +91,10 @@ describe_pet("kedi","eylül")
 
 describe_pet("kuş","cicik")
 """
-#### konumsal argümanlarda sıraya dikkat etmek gerekir . etmezsen komik veyahutta rezil şeylerle karşılaşabilirsin
+#### konumsal argümanlarda sıraya dikkat etmek gerekir . etmezsen komik veyahut rezil şeylerle karşılaşabilirsin
 ####################################################################
+##### ANAHTAR KELIME ARGÜMANLARI ##### 
 """
-##### anahtar kelime argümanlar #####  
-
 def describe_pet(animal_type, pet_name) :
     print(f"\n ben bir {animal_type} sahibiyim")
     print(f"\nhayvanımın adı {pet_name} dir")
@@ -98,13 +102,11 @@ def describe_pet(animal_type, pet_name) :
 describe_pet(animal_type="kedi",pet_name="eylül")
 """
 ####################################################################
-"""
-############ varsayılan değer ##########
-
+############ VARSAYILAN DEĞER ##########
 # eğer parametreye direkt varsayılan değer verirsek ve daha sonra değiştirmezsek
 # python otomatik olarak o değeri kabul eder ama istersek değiştirebiliriz.
-
-def describe_pet(pet_name,animal_type= "kedi" ) : # değer atamadığın önce gelmeli.
+"""
+def describe_pet(pet_name,animal_type= "kedi" ) : # değer atamadığımız argüman önce gelmeli.
     print(f"\n ben bir {animal_type} sahibiyim")
     print(f"\nhayvanımın adı {pet_name} dir")
 
@@ -114,13 +116,9 @@ describe_pet("eylül")
 describe_pet("yılan", "çıngırak") # konumsal argüman hatası yaptım DİKKATLİ OL !!!
 
 describe_pet("çıngırak", "yılan")
-
-def padişah(adı,kaçıncı):
-    print(f"sultan {kaçıncı} {adı.title()} huzura teşrif etmişlerdir")
-
-padişah("mehmet","2.")
 """
 ####################################################################
+# ÇITIR UYGULAMA
 """
 # 1.
 def tisort(yazı,boy):
@@ -146,7 +144,8 @@ sehir(il="kayseri",ülke="türkiye",kıta="hem avrupa hem asya")
 sehir(ülke="Fransa",il="marsilya")
 """
 ####################################################################
-########## döndürülen değerler #########
+########## RETURN - DÖNDÜRÜLEN DEĞERLER #########
+# değer döndüren bir fonksiyonu çağırdığınızda döndürülen değerin atanabileceği bir değişkeni temin etmeniz gerekir.
 """
 def describe_name(first_name,last_name):
     full_name = f"{first_name} {last_name}"
@@ -156,9 +155,9 @@ scientist = describe_name("oktay","sinanoğlu")
 
 print(scientist)
 """
-# değer döndüren bir fonksiyonu çağırdığınızda döndürülen değerin atanabileceği bir değişkeni temin etmeniz gerekir.
+
 ####################################################################
-##### Bir argümanı isteğe bağlı hale getirmek
+####### BIR ARGÜMANI ISTEĞE BAĞLI HALE GETIRMEK
 """
 def describe_name(first_name,last_name,middle_name=""):
     if middle_name:
@@ -179,7 +178,7 @@ aktör = describe_name("muhammed","şaşmaz","necati")
 print(aktör)
 """
 ####################################################################
-##### sözlük döndürmek #######
+##### FONKSİYONLAR İLE SÖZLÜK TANIMLAMAK #######
 """
 def cars(name,model):
     car = {"adı": name,"modeli":model}
@@ -190,32 +189,29 @@ Car=cars("canavar","dodge challanger")
 print("istenilen arabanın özellikleri : ",Car)
 """
 #####################################
+# UYGULAMA - FONKSİYONLAR İLE SÖZLÜK TANIMLAMAK
 """
-def for_a_man(first,second,third):
+def to_become_a_man(first,second,third):
     man={"embrace":first,"loves":second,"fight type":third}
     return man
     
-modern_man = for_a_man("his car","his wife","intelligence and disipline")
+modern_man = to_become_a_man("his car","his wife","intelligence and disipline")
 
 print("\n######### What shoulde be modern man's mentality #########")
 
 print(modern_man)
 """
 ####################################################################
+# :)
 """
 def ne_olcak_bu_isler():
     print("düzelcez be abi")
 
 
 ne_olcak_bu_isler()
-
-# yaw aslında ben ne güzel çalışıyordum bu yaz tatili beni bi tık bitirdi fonksiyonlara kadar geldim onu da yarıladım ama 
-# bitiremedim be usta
 """
-
 ############################################################
-
-## WHİLE DÖNGÜSÜNDE FONKSİYON KULLANMAK
+## WHİLE DÖNGÜSÜ İLE KULLANICIDAN FONKSİYON ARGÜMANLARI İSTEMEK
 """
 def person(first_name, second_name):
     ful_name = f"{first_name} {second_name}"
@@ -225,20 +221,21 @@ while 1: # sonsuz döngü
     print ( "\nLütfen adınızı giriniz : ")
     print("çıkış için q ya basınız.")
 
-    f_name = input("adınız : ")
-    if f_name == "q":
+    first_name = input("adınız : ")
+    if first_name == "q":
         print("çıkış gerçekleştirilmiştir.")
         break
     
-    s_name = input("soyadınız : ")
-    if s_name == "q":
+    second_name = input("soyadınız : ")
+    if second_name == "q":
         print("çıkış gerçekleştirilmiştir.")
         break
 
-    person_name= person(f_name,s_name)
+    person_name= person(first_name,second_name)
     print(f"\nHello, {person_name}")
 """
 ############################################################
+# FONKSİYON OLUŞTURMAK VE KULLANMAK - HATIRLATMA
 """
 def şehir_ülke(şehir,ülke):
     print(f"{şehir.title()} ,{ülke.title()}")
@@ -251,31 +248,32 @@ def şehir_ülke(şehir,ülke):
 
 """
 ############################################################
+# UYGULAMA
 """
 def albüm(sanatçı,albüm_ismi,müzik_sayısı=None):
-    #şarkılar = []
+    şarkılar = []
     
     şarkı = {"santçının adı :":sanatçı,
              "albüm ismi : ": albüm_ismi,
               "müzik sayısı : ":müzik_sayısı}
     
-    #şarkılar.append(şarkı)
+    şarkılar.append(şarkı)
 
-    #for müzik in şarkılar:
-          #print(müzik)
+    for müzik in şarkılar:
+          print(müzik)
     for key , value in şarkı.items():
         print(f"{key} {value}") 
 
 while 1:
-    #print("Çıkış için lütfen q ya basınız.")
+    print("Çıkış için lütfen q ya basınız.")
 
     isim = input("lüten sanatçı adı giriniz : ")
-    #if isim == "q":
-        # break
+    if isim == "q":
+        break
     
     albüm_adı = input("lüten albüm adı giriniz : ")
-    #if albüm_adı == "q":
-         #break
+    if albüm_adı == "q":
+         break
     break
 
 
@@ -286,7 +284,7 @@ albüm(isim,albüm_adı)
 """
 def selam(kişi):
     for isim in insanlar:
-        mesaj= f"selamün alyeküm {isim.title()}"
+        mesaj= f"selamün aleyküm {isim.title()}"
         print (mesaj)
 
 
@@ -295,7 +293,7 @@ insanlar = [ "ali", "veli", "yusuf"]
 selam(insanlar)
 """
 ############################################################
-# FONKSİYON İÇERİSİNDE LİSTEYİ GEĞİŞTİRMEK
+# FONKSİYON İÇERİSİNDE LİSTEYİ DEĞİŞTİRMEK
 """
 basılmamış_tasarımlar = ["surat","yazı","araba"]
 
@@ -315,25 +313,25 @@ for basılan_model in basılmış_modeller:
     print(basılan_model)
 """
 
-# LETS DO İT WİTH FUNCTİON
+# LETS DO IT WITH FUNCTION
 """
 basılmış_modeller = []
 
 basılmamış_tasarımlar = ["surat","yazı","araba"]
 
-def model_yazdır(basılacak,basılmış):
+def model_yazdır(basılmış,basılacak):
 
-    while basılmamış_tasarımlar:
-        sıradaki_tasarım = basılmamış_tasarımlar.pop()
+    while basılacak:
+        sıradaki_tasarım = basılacak.pop()
 
         print(f" Basılacak model : ",sıradaki_tasarım)
 
-        basılmış_modeller.append(sıradaki_tasarım)
+        basılmış.append(sıradaki_tasarım)
 
-def basılan_modeli_göster(basılmış_modeller):
+def basılan_modeli_göster(basılmış):
     print(f"\n Aşağıdaki modeller basılmıştır : ")
 
-    for basılan_model in basılmış_modeller:
+    for basılan_model in basılmış:
         print(basılan_model)
 
 model_yazdır(basılmış_modeller,basılmamış_tasarımlar )
@@ -341,6 +339,7 @@ model_yazdır(basılmış_modeller,basılmamış_tasarımlar )
 basılan_modeli_göster(basılmış_modeller)
 """
 ############################################################
+# ARGÜMAN OLARAK LİSTE GÖNDERMEK - ÇITIR UYGULAMA
 """
 mesajlar = ["gelirken 2 ekmek al","ilacını içmeyi unutma","yarın miraç kandili dedeni ara"]
 
@@ -353,6 +352,7 @@ def hatırlatıcı(x):
 hatırlatıcı(mesajlar)
 """
 ############################################################
+# ÜSTTEKİ UYGULAMANIN GENİŞLETİLMİŞ HALİ
 """
 mesajlar = ["gelirken 2 ekmek al","ilacını içmeyi unutma","yarın miraç kandili dedeni ara"]
 
@@ -370,14 +370,14 @@ def mesajKontrol(a):
 
         giden_mesajlar.append(taşı)
 
-mesajKontrol(yeni_msj)
+#mesajKontrol(yeni_msj)
 
 print("##################################")
-print(mesajlar)
+print("Mesajlar : ",mesajlar)
 print("##################################")
-print(yeni_msj)
+print("Yeni mesajlar : ",yeni_msj)
 print("##################################")
-print(giden_mesajlar)
+print("Giden mesajlar : ",giden_mesajlar)
 
 """
 ############################################################
@@ -394,8 +394,7 @@ print("\n\n")
 malzeme("sucuk","pastırma","domates","biber")
 """
 
-# KONUMSAL VE KEYFİ ARGÜMANLARI KARIŞTIRMAK
-
+# KONUMSAL VE KEYFİ ARGÜMANLARI KULLANMAK
 """
 def malzeme(boyut,*eklenecek_malzemeler):
 
@@ -414,9 +413,8 @@ malzeme("orta","sucuk","pastırma","domates","biber")
 
 """
 
-#KEYFİ ANAHTAR KELİME ARGÜMANLAR KULLANMAK
+#KEYFİ ANAHTAR - KELİME(SÖZLÜK) ARGÜMANLAR KULLANMAK
 """
-
 def insan(ilkAd,ikinciAd,**bilgi):
    
    print("\nkullanıcını Adı ve Soyadı : ",ilkAd +" "+ ikinciAd)
@@ -425,17 +423,15 @@ def insan(ilkAd,ikinciAd,**bilgi):
    for key ,value in bilgi.items():
         print(f"\n\t\t{key} = {value}")
    
-    # bilgi["isim"] = ilkAd
-    # bilgi["soyisim"]= ikinciAd
-
-    #return bilgi
-
+   
 kullanıcı_hakkında = insan("yusuf","yağcı",memleket = "kayseri",boy = "188 cm", kilo = "85 kg" , eğitim = "lisans" , meslek ="Bilgisayar Mühendisliği")
 
 print(kullanıcı_hakkında) # çalıştırınca en sonda none yazıyor anlamadım onu 
 """
 ############################################################
 # FONKSİYONLARI MODÜL HALİNE GETİRMEK --- MODÜLLER
+# hayır seçeneğini seçtikten sonra direkt çıkmıyor kullanıcıdan bir daha seçim yapmasını istiyor.onu çözemedim
+# her şeye evet diyince sorunsuz çalışıyor tıpkı insanlar gibi :D
 """
 import pizza
 
